@@ -27,5 +27,4 @@ public void logout() {
 	driver.findElement(By.cssSelector("a[href='https://www.phptravels.net/account/logout'][class=' waves-effect']")).click();
 	
 }
-
 }

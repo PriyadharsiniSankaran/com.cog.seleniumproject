@@ -10,12 +10,12 @@ public static WebDriver returndriver(String browsertype)
 {		
 	  if(browsertype.equalsIgnoreCase("Chrome")) 
 	  {
-	  System.setProperty("com.driver.chromedriver", "/src/chromdriver.exe");
+	  System.setProperty("webdriver.chrome.driver", "./src/chromedriver");
 	  return new ChromeDriver();
 	  } else
 	  if(browsertype.equalsIgnoreCase("Gecko"))
 	  {
-	  System.setProperty("com.driver.geckodriver", "/src/geckodriver.exe");
+	  System.setProperty("webdriver.gecko.driver", "./src/geckodriver");
 	  return new FirefoxDriver();
   
 	  }		
