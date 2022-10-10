@@ -14,7 +14,7 @@ public class Logintest {
 		String url="https://phptravels.net/login";	
 		WebDriver driver=Driver.returndriver(browsertype);
 		driver.get(url);
-		System.out.println(driver.getCurrentUrl());
+		System.out.println("URL ="+driver.getCurrentUrl());
         Login lm=new Login(driver);
         lm.setEmail(email);
         lm.setPassword(password);
