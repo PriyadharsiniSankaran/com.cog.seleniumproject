@@ -41,5 +41,10 @@
     <version>7.6.1</version>
     <scope>compile</scope>
 </dependency> 
+<dependency>
+  <groupId>org.slf4j</groupId>
+  <artifactId>slf4j-simple</artifactId>
+  <version>1.7.21</version>
+</dependency>
 </dependencies>
 </project>
