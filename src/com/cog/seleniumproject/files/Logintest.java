@@ -54,7 +54,8 @@ System.setProperty("webdriver.chrome.driver", "./src/chromedriver");
  ChromeOptions options = new ChromeOptions();
  options.addArguments("headless");
 
-			 driver= new ChromeDriver(options);		
+			 driver= new ChromeDriver(options);	
+			 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			}
 		@AfterTest
 		public void aftertest()
