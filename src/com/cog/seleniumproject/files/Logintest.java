@@ -1,7 +1,12 @@
 package com.cog.seleniumproject.files;
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.http.ClientConfig;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -45,8 +50,11 @@ public class Logintest {
 		@BeforeTest
 		public void beforetest()
 		{
-			 System.setProperty("webdriver.chrome.driver", "./src/chromedriver");
-			 driver= new ChromeDriver();		
+System.setProperty("webdriver.chrome.driver", "./src/chromedriver");
+ ChromeOptions options = new ChromeOptions();
+ options.addArguments("headless");
+
+			 driver= new ChromeDriver(options);		
 			}
 		@AfterTest
 		public void aftertest()
