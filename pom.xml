@@ -3,7 +3,7 @@
   <groupId>com.cog.seleniumproject</groupId>
   <artifactId>com.cog.seleniumproject</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <build>
+    <build>
     <sourceDirectory>src</sourceDirectory>
     <pluginManagement>
     <plugins>
@@ -11,6 +11,11 @@
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-surefire-plugin</artifactId>
     <version>3.0.0-M7</version>
+     <configuration>
+     <suiteXmlFiles>
+     <suiteXmlFile>testng.xml</suiteXmlFile>
+     </suiteXmlFiles>
+       </configuration>
     </plugin>
       <plugin>
       <groupId>org.apache.maven.plugins</groupId>
@@ -22,24 +27,19 @@
     </plugins>
     </pluginManagement>
   </build>
-    <dependencies>
-  <dependency>
-    <groupId>junit</groupId>
-    <artifactId>junit</artifactId>
-    <version>4.13.2</version>
-    <scope>test</scope>
-</dependency>
+ 
+  <dependencies>
+
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
     <version>4.5.0</version>
 </dependency>
-
 <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
     <version>7.6.1</version>
     <scope>compile</scope>
-</dependency>
+</dependency> 
 </dependencies>
 </project>
