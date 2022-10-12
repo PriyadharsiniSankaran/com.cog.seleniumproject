@@ -1,61 +1,48 @@
 package com.cog.seleniumproject.files;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.time.Duration;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.remote.http.ClientConfig;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
-
-public class Logintest {
-
-		//System.setProperty("webdriver.chrome.driver", "./src/chromedriver");	
-		//System.setProperty("webdriver.gecko.driver", "./src/geckodriver");
+public class Logintest 
+{
 		String email="agent@phptravels.com";
 		String password="demoagent";
 		String login="button[class='btn btn-default btn-lg btn-block effect ladda-button waves-effect']";
 		String browsertype="chrome";
 		String url="https://phptravels.net/login";		
 		WebDriver driver;
-
 		@Test
 		public void send()
 		{
 			driver.get(url);
 			System.out.println("URL ="+driver.getCurrentUrl());
-			/*
-			 * driver.findElement(By.name("email")).sendKeys(email);
-			 * driver.findElement(By.name("password")).sendKeys(password);
-			 * driver.findElement(By.cssSelector(login)).click();
-			 */
-			//driver.findElement(By.cssSelector("a[href='https://www.phptravels.net/account/logout'][class=' waves-effect']")).click();
-
-			
-			  Login lm=new Login(driver);
-			  
+			 Login lm=new Login(driver); 
 			  lm.setEmail(email); 
 			  System.out.println("Entered email");
 			  lm.setPassword(password);
 			  System.out.println("Entered password");
 			  lm.clickbutton(login);
-			  System.out.println("Logged in Successfully");
-		
-			 
+			  System.out.println("Logged in Successfully");	
 		}
 		@BeforeTest
-		public void beforetest()
+		public void beforetest() throws MalformedURLException
 		{
-System.setProperty("webdriver.chrome.driver", "./src/chromedriver");
+ System.setProperty("webdriver.chrome.driver", "./src/chromedriver");
  ChromeOptions options = new ChromeOptions();
- options.addArguments("headless");
+ options.setBinary("./src/chromedriver");
+ //options.addArguments("headless");
 
-			 driver= new ChromeDriver(options);	
-			 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+
+
+			 driver= new ChromeDriver();	
+			 //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			}
 		@AfterTest
 		public void aftertest()

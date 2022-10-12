@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:lts
+FROM jenkins/jenkins
 
 # Set user root to allow us to install the rest of what's needed
 USER root
@@ -13,13 +13,12 @@ RUN add-apt-repository \
   $(lsb_release -cs) stable"
 RUN apt-get update && apt-get install -y docker-ce-cli
 
-RUN apt-get update && apt-get install -y wget 
+RUN apt-get update && apt-get install -y wget iputils-ping net-tools
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
 RUN echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list
 RUN apt-get update
 RUN apt-get install -y google-chrome-stable xvfb
 ENV CHROME_BIN='/usr/bin/google-chrome-stable'
-USER jenkins
 
 #==================
 # Chrome webdriver
