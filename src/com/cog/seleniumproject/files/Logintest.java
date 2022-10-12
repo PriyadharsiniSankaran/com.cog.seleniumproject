@@ -10,6 +10,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 public class Logintest 
 {
 		String email="agent@phptravels.com";
@@ -34,13 +36,13 @@ public class Logintest
 		@BeforeTest
 		public void beforetest() throws MalformedURLException
 		{
- System.setProperty("webdriver.chrome.driver", "./src/chromedriver");
+// System.setProperty("webdriver.chrome.driver", "./src/chromedriver");
  ChromeOptions options = new ChromeOptions();
  options.setBinary("./src/chromedriver");
  //options.addArguments("headless");
 
 
-
+WebDriverManager.chromedriver().setup();
 			 driver= new ChromeDriver();	
 			 //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			}
