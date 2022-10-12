@@ -37,14 +37,17 @@ public class Logintest
 		public void beforetest() throws MalformedURLException
 		{
 // System.setProperty("webdriver.chrome.driver", "./src/chromedriver");
+		    
  ChromeOptions options = new ChromeOptions();
  options.setBinary("./src/chromedriver");
  //options.addArguments("headless");
 
 
+
 WebDriverManager.chromedriver().setup();
-			 driver= new ChromeDriver();	
-			 //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+driver= new ChromeDriver();	
+             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+
 			}
 		@AfterTest
 		public void aftertest()
