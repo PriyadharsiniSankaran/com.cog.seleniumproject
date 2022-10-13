@@ -1,12 +1,10 @@
 package com.cog.seleniumproject.files;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -14,35 +12,38 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 public class Logintest 
 {
-		String email="agent@phptravels.com";
-		String password="demoagent";
-		String login="button[class='btn btn-default btn-lg btn-block effect ladda-button waves-effect']";
+		String email="standard_user";
+		String password="secret_sauce";
 		String browsertype="chrome";
-		String url="https://phptravels.net/login";		
+		String url="https://www.saucedemo.com/";
+		  	
 		WebDriver driver;
 		@Test
 		public void send()
 		{
 			driver.get(url);
 			System.out.println("URL ="+driver.getCurrentUrl());
+			
 			Login lm=new Login(driver); 
 			lm.setEmail(email); 
 			System.out.println("Entered email");
 			lm.setPassword(password);
 			System.out.println("Entered password");
-			lm.clickbutton(login);
+			lm.clickbutton();
 			System.out.println("Logged in Successfully");	
 		}
 		@BeforeTest
-		public void beforetest() throws MalformedURLException
+		public void beforetest() 
 		{
- System.setProperty("webdriver.chrome.driver", "./src/chromedriver");		    
- ChromeOptions options = new ChromeOptions();
- options.addArguments("headless");
-//WebDriverManager.chromedriver().setup();
- driver= new ChromeDriver();	
- driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));			
-		}
+			System.setProperty("webdriver.chrome.driver", "./src/chromedriver");		    
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("headless");
+			//WebDriverManager.chromedriver().setup();
+			driver= new ChromeDriver();	
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+			         
+        }
+			
 		@AfterTest
 		public void aftertest()
 		{
