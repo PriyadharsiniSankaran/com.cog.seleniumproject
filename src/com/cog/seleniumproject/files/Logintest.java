@@ -35,10 +35,10 @@ public class Logintest
 		@BeforeTest
 		public void beforetest() 
 		{
-			System.setProperty("webdriver.gecko.driver", "./src/geckodriver");		    
+			//System.setProperty("webdriver.gecko.driver", "./src/geckodriver");		    
 			//ChromeOptions options = new ChromeOptions();
 			//options.addArguments("headless");
-			//WebDriverManager.chromedriver().setup();
+			WebDriverManager.firefoxdriver().setup();
 			driver= new FirefoxDriver();	
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			         
