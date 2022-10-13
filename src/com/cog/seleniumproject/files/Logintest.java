@@ -35,11 +35,11 @@ public class Logintest
 		@BeforeTest
 		public void beforetest() 
 		{
-			System.setProperty("webdriver.chrome.driver", "./src/chromedriver");		    
-			ChromeOptions options = new ChromeOptions();
-			options.addArguments("headless");
+			System.setProperty("webdriver.gecko.driver", "./src/geckodriver");		    
+			//ChromeOptions options = new ChromeOptions();
+			//options.addArguments("headless");
 			//WebDriverManager.chromedriver().setup();
-			driver= new ChromeDriver();	
+			driver= new FirefoxDriver();	
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			         
         }
