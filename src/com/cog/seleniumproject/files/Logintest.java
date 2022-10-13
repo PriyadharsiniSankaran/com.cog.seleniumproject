@@ -25,30 +25,24 @@ public class Logintest
 		{
 			driver.get(url);
 			System.out.println("URL ="+driver.getCurrentUrl());
-			 Login lm=new Login(driver); 
-			  lm.setEmail(email); 
-			  System.out.println("Entered email");
-			  lm.setPassword(password);
-			  System.out.println("Entered password");
-			  lm.clickbutton(login);
-			  System.out.println("Logged in Successfully");	
+			Login lm=new Login(driver); 
+			lm.setEmail(email); 
+			System.out.println("Entered email");
+			lm.setPassword(password);
+			System.out.println("Entered password");
+			lm.clickbutton(login);
+			System.out.println("Logged in Successfully");	
 		}
 		@BeforeTest
 		public void beforetest() throws MalformedURLException
 		{
-// System.setProperty("webdriver.chrome.driver", "./src/chromedriver");
-		    
+ System.setProperty("webdriver.chrome.driver", "./src/chromedriver");		    
  ChromeOptions options = new ChromeOptions();
- options.setBinary("./src/chromedriver");
- //options.addArguments("headless");
-
-
-
-WebDriverManager.chromedriver().setup();
-driver= new ChromeDriver();	
-             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-
-			}
+ options.addArguments("headless");
+//WebDriverManager.chromedriver().setup();
+ driver= new ChromeDriver();	
+ driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));			
+		}
 		@AfterTest
 		public void aftertest()
 		{

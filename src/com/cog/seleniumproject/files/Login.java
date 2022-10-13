@@ -2,10 +2,8 @@ package com.cog.seleniumproject.files;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.Test;
 
 public class Login {
-
 	WebDriver driver;
 	public Login(WebDriver driver)
 	{
@@ -23,9 +21,7 @@ public void clickbutton(String login)
 {
 driver.findElement(By.cssSelector(login)).click();
 }
-
 public void logout() {
-	driver.findElement(By.cssSelector("a[href='https://www.phptravels.net/account/logout'][class=' waves-effect']")).click();
-	
+	driver.findElement(By.cssSelector("a[href='https://www.phptravels.net/account/logout'][class=' waves-effect']")).click();	
 }
 }

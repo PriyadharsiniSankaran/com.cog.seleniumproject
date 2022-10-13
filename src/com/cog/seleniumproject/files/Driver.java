@@ -17,7 +17,6 @@ public static WebDriver returndriver(String browsertype)
 	  {
 	  System.setProperty("webdriver.gecko.driver", "./src/geckodriver");
 	  return new FirefoxDriver();
-  
 	  }		
 	  else
 	  {
