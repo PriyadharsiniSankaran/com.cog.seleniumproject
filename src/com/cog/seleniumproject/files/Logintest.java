@@ -4,6 +4,7 @@ import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterTest;
@@ -36,11 +37,13 @@ public class Logintest
 		@BeforeTest
 		public void beforetest() 
 		{
-			//System.setProperty("webdriver.gecko.driver", "./src/geckodriver");		    
+			//System.setProperty("webdriver.gecko.driver", "./src/geckodriver");
 			//ChromeOptions options = new ChromeOptions();
+			FirefoxBinary firefoxBinary = new FirefoxBinary();
 		    FirefoxOptions options=new FirefoxOptions();
-			//options.addArguments("headless");
-			WebDriverManager.firefoxdriver().setup();
+		    options.setBinary(firefoxBinary);
+			options.setHeadless(true);
+		    WebDriverManager.firefoxdriver().setup();
 			driver= new FirefoxDriver(options);	
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			         
