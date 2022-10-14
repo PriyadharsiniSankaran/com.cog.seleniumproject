@@ -1,8 +1,6 @@
 package com.cog.seleniumproject.files;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
 public class Login {
 	WebDriver driver;
 	public Login(WebDriver driver)
@@ -16,7 +14,6 @@ public class Login {
 	public void setPassword(String password) {
 		driver.findElement(By.id("password")).sendKeys(password);;
 	}
-
 public void clickbutton() 
 {
 driver.findElement(By.id("login-button")).click();

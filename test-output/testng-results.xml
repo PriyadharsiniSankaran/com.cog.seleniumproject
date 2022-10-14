@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-14T16:59:38 AEDT" name="Default suite" finished-at="2022-10-14T16:59:48 AEDT" duration-ms="9430">
+  <suite started-at="2022-10-15T08:56:05 AEDT" name="Default suite" finished-at="2022-10-15T08:56:12 AEDT" duration-ms="7033">
     <groups>
     </groups>
-    <test started-at="2022-10-14T16:59:38 AEDT" name="Default test" finished-at="2022-10-14T16:59:48 AEDT" duration-ms="9430">
+    <test started-at="2022-10-15T08:56:05 AEDT" name="Default test" finished-at="2022-10-15T08:56:12 AEDT" duration-ms="7033">
       <class name="com.cog.seleniumproject.files.Logintest">
-        <test-method is-config="true" signature="beforetest()[pri:0, instance:com.cog.seleniumproject.files.Logintest@54bff557]" started-at="2022-10-14T16:59:38 AEDT" name="beforetest" finished-at="2022-10-14T16:59:42 AEDT" duration-ms="3922" status="PASS">
+        <test-method is-config="true" signature="beforetest()[pri:0, instance:com.cog.seleniumproject.files.Logintest@54bff557]" started-at="2022-10-15T08:56:05 AEDT" name="beforetest" finished-at="2022-10-15T08:56:08 AEDT" duration-ms="2701" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforetest -->
-        <test-method signature="send()[pri:0, instance:com.cog.seleniumproject.files.Logintest@54bff557]" started-at="2022-10-14T16:59:42 AEDT" name="send" finished-at="2022-10-14T16:59:43 AEDT" duration-ms="1463" status="PASS">
+        <test-method signature="send()[pri:0, instance:com.cog.seleniumproject.files.Logintest@54bff557]" started-at="2022-10-15T08:56:08 AEDT" name="send" finished-at="2022-10-15T08:56:10 AEDT" duration-ms="1478" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- send -->
-        <test-method is-config="true" signature="aftertest()[pri:0, instance:com.cog.seleniumproject.files.Logintest@54bff557]" started-at="2022-10-14T16:59:43 AEDT" name="aftertest" finished-at="2022-10-14T16:59:48 AEDT" duration-ms="4024" status="PASS">
+        <test-method is-config="true" signature="aftertest()[pri:0, instance:com.cog.seleniumproject.files.Logintest@54bff557]" started-at="2022-10-15T08:56:10 AEDT" name="aftertest" finished-at="2022-10-15T08:56:12 AEDT" duration-ms="2834" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftertest -->

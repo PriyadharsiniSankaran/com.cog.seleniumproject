@@ -8,8 +8,7 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 public class Logintest 
 {
-		String url="https://www.saucedemo.com/";
-		  	
+		String url="https://www.saucedemo.com/";		  	
 		WebDriver driver;
 		@Test
 		public void send()
@@ -26,8 +25,7 @@ public class Logintest
             options.setHeadless(true);
            WebDriverManager.firefoxdriver().setup();
             driver= new FirefoxDriver(options);    
-            //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-              
+            //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));             
         }		
 		@AfterTest
 		public void aftertest()
