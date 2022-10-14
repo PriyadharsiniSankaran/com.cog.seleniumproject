@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.cog.seleniumproject.files.Logintest">
+      <class name="com.cog.seleniumproject.files.LoginChrome">
         <methods>
           <include name="aftertest"/>
-          <include name="beforetest"/>
           <include name="send"/>
+          <include name="beforetest"/>
         </methods>
-      </class> <!-- com.cog.seleniumproject.files.Logintest -->
+      </class> <!-- com.cog.seleniumproject.files.LoginChrome -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
