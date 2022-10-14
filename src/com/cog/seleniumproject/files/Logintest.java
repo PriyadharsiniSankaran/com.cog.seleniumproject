@@ -37,12 +37,13 @@ public class Logintest
 		@BeforeTest
 		public void beforetest() 
 		{
-			System.setProperty("webdriver.gecko.driver", "./src/geckodriver");
+			//System.setProperty("webdriver.gecko.driver", "./src/geckodriver");
 			//ChromeOptions options = new ChromeOptions();
 			//FirefoxBinary firefoxBinary = new FirefoxBinary();
 		    FirefoxOptions options=new FirefoxOptions();
-		    //options.setBinary(firefoxBinary);
-			options.setHeadless(true);		   
+		   // options.setBinary(firefoxBinary);
+			options.setHeadless(true);
+		    WebDriverManager.firefoxdriver().setup();
 			driver= new FirefoxDriver(options);	
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			         
