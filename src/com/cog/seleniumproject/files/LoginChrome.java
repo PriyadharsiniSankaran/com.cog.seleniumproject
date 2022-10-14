@@ -28,6 +28,8 @@ public class LoginChrome {
         WebDriverManager.chromedriver().setup();
       //  System.setProperty("webdriver.chrome.driver", "./src/chromedriver");
         ChromeOptions chromeoptions = new ChromeOptions();
+        chromeoptions.addArguments("--no-sandbox");
+        chromeoptions.addArguments("--disable-dev-shm-usage");
         chromeoptions.setHeadless(true);
         driver= new ChromeDriver(chromeoptions);
   

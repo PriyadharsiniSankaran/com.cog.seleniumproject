@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-14T14:42:01 AEDT" name="Default suite" finished-at="2022-10-14T14:42:08 AEDT" duration-ms="7085">
+  <suite started-at="2022-10-14T15:01:31 AEDT" name="Default suite" finished-at="2022-10-14T15:01:35 AEDT" duration-ms="4171">
     <groups>
     </groups>
-    <test started-at="2022-10-14T14:42:01 AEDT" name="Default test" finished-at="2022-10-14T14:42:08 AEDT" duration-ms="7085">
-      <class name="com.cog.seleniumproject.files.Logintest">
-        <test-method is-config="true" signature="beforetest()[pri:0, instance:com.cog.seleniumproject.files.Logintest@54bff557]" started-at="2022-10-14T14:42:01 AEDT" name="beforetest" finished-at="2022-10-14T14:42:04 AEDT" duration-ms="2699" status="PASS">
+    <test started-at="2022-10-14T15:01:31 AEDT" name="Default test" finished-at="2022-10-14T15:01:35 AEDT" duration-ms="4171">
+      <class name="com.cog.seleniumproject.files.LoginChrome">
+        <test-method is-config="true" signature="beforetest()[pri:0, instance:com.cog.seleniumproject.files.LoginChrome@54bff557]" started-at="2022-10-14T15:01:31 AEDT" name="beforetest" finished-at="2022-10-14T15:01:34 AEDT" duration-ms="3397" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforetest -->
-        <test-method signature="send()[pri:0, instance:com.cog.seleniumproject.files.Logintest@54bff557]" started-at="2022-10-14T14:42:04 AEDT" name="send" finished-at="2022-10-14T14:42:05 AEDT" duration-ms="653" status="PASS">
+        <test-method signature="send()[pri:0, instance:com.cog.seleniumproject.files.LoginChrome@54bff557]" started-at="2022-10-14T15:01:34 AEDT" name="send" finished-at="2022-10-14T15:01:35 AEDT" duration-ms="638" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- send -->
-        <test-method is-config="true" signature="aftertest()[pri:0, instance:com.cog.seleniumproject.files.Logintest@54bff557]" started-at="2022-10-14T14:42:05 AEDT" name="aftertest" finished-at="2022-10-14T14:42:08 AEDT" duration-ms="3714" status="PASS">
+        <test-method is-config="true" signature="aftertest()[pri:0, instance:com.cog.seleniumproject.files.LoginChrome@54bff557]" started-at="2022-10-14T15:01:35 AEDT" name="aftertest" finished-at="2022-10-14T15:01:35 AEDT" duration-ms="114" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftertest -->
-      </class> <!-- com.cog.seleniumproject.files.Logintest -->
+      </class> <!-- com.cog.seleniumproject.files.LoginChrome -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
