@@ -6,6 +6,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 public class Logintest 
 {
@@ -23,10 +25,10 @@ public class Logintest
 		@BeforeTest
 		public void beforetest() 
 		{
-            System.setProperty("webdriver.gecko.driver", "./src/geckodriver");
+            //System.setProperty("webdriver.gecko.driver", "./src/geckodriver");
             FirefoxOptions options=new FirefoxOptions();
             options.setHeadless(true);
-           // WebDriverManager.firefoxdriver().setup();
+           WebDriverManager.firefoxdriver().setup();
             driver= new FirefoxDriver(options);    
             //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
               
