@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -37,9 +38,10 @@ public class Logintest
 		{
 			//System.setProperty("webdriver.gecko.driver", "./src/geckodriver");		    
 			//ChromeOptions options = new ChromeOptions();
+		    FirefoxOptions options=new FirefoxOptions();
 			//options.addArguments("headless");
 			WebDriverManager.firefoxdriver().setup();
-			driver= new FirefoxDriver();	
+			driver= new FirefoxDriver(options);	
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			         
         }
