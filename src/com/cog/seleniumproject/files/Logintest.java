@@ -39,9 +39,9 @@ public class Logintest
 		{
 			//System.setProperty("webdriver.gecko.driver", "./src/geckodriver");
 			//ChromeOptions options = new ChromeOptions();
-			//FirefoxBinary firefoxBinary = new FirefoxBinary();
+			FirefoxBinary firefoxBinary = new FirefoxBinary();
 		    FirefoxOptions options=new FirefoxOptions();
-		   // options.setBinary(firefoxBinary);
+		   options.setBinary(firefoxBinary);
 			options.setHeadless(true);
 		    WebDriverManager.firefoxdriver().setup();
 			driver= new FirefoxDriver(options);	
