@@ -1,4 +1,4 @@
-FROM jenkins/jenkins
+FROM jenkins/jenkins:lts-jdk11
 
 # Set user root to allow us to install the rest of what's needed
 USER root
@@ -25,13 +25,13 @@ RUN apt-get update && apt-get install -y \
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
 RUN echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list
 RUN apt-get update
-RUN apt-get install chromium
+RUN apt-get install -y chromium
 
 #==================
 # FIREFOX BROWSER
 #==================
 
-RUN apt-get install firefox-esr
+RUN apt-get install -y firefox-esr
 
 #==================
 # Chrome webdriver
@@ -48,18 +48,6 @@ RUN  wget -nv -O chromedriver_linux${CPU_ARCH}.zip ${CHROME_DRIVER_URL} \
   && mv chromedriver /usr/local/bin/ \
   && chromedriver --version
 
-#==================
-# Gecko webdriver
-#==================
- ENV geckodriver_ver=0.32.0
- RUN curl -fL -o /tmp/geckodriver.tar.gz \
-         https://github.com/mozilla/geckodriver/releases/download/v${geckodriver_ver}/geckodriver-v${geckodriver_ver}-linux64.tar.gz \
- && tar -xzf /tmp/geckodriver.tar.gz -C /tmp/ \
- && chmod +x /tmp/geckodriver \
- && mv /tmp/geckodriver /usr/local/bin/ 
-
-FROM jenkins
-
-
-
- 
+ # Download and install geckodriver
+RUN wget -O /tmp/geckodriver 'https://github.com/mozilla/geckodriver/releases/tag/v0.32.0/geckodriver-v0.32.0-linux64.tar.gz' 
+USER jenkins
