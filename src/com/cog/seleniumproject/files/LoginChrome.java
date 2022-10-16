@@ -17,7 +17,6 @@ public class LoginChrome {
         Call call = new Call(driver);
         call.call();
     }
-
     @BeforeTest
     public void beforetest() 
     {
