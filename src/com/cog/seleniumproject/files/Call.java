@@ -3,8 +3,8 @@ package com.cog.seleniumproject.files;
 import org.openqa.selenium.WebDriver;
 
 public class Call {
-     String email="standard_user";
-     String password="secret_sauce";
+    String email="standard_user";
+    String password="secret_sauce";
     WebDriver driver;
     public Call(WebDriver driver)
     {
@@ -16,7 +16,7 @@ public class Call {
       lm.setEmail(email); 
       System.out.println("Email ="+email);
       lm.setPassword(password);
-      System.out.println("Password ="+password);
+      System.out.println("Password ="+"*******");
       lm.clickbutton();
       System.out.println("Logged in Successfully");   
 }
