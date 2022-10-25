@@ -14,9 +14,9 @@ public class Call {
     {
       Login lm=new Login(driver); 
       lm.setEmail(email); 
-      System.out.println("Email ="+email);
+      System.out.println("Email is printed");
       lm.setPassword(password);
-      System.out.println("Password ="+"*******");
+      System.out.println("Password is printed");
       lm.clickbutton();
       System.out.println("Logged in Successfully");   
 }
