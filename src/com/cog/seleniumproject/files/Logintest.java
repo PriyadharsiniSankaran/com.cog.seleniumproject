@@ -27,10 +27,10 @@ public class Logintest
 		@BeforeTest
 		public void beforetest() 
 		{
-            //FirefoxOptions options=new FirefoxOptions();
-           // options.setHeadless(true);
+            FirefoxOptions options=new FirefoxOptions();
+            options.setHeadless(true);
             WebDriverManager.firefoxdriver().setup();
-            driver= new FirefoxDriver();    
+            driver= new FirefoxDriver(options);    
             //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));             
         }		
 		@AfterTest
