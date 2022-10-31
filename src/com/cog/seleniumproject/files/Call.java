@@ -3,8 +3,8 @@ package com.cog.seleniumproject.files;
 import org.openqa.selenium.WebDriver;
 
 public class Call {
-    String email="standard_user";
-    String password="secret_sauce";
+    String email="priyadharsini.sankaran@swm.selenium";
+    String password="Tomygirl17";
     WebDriver driver;
     public Call(WebDriver driver)
     {

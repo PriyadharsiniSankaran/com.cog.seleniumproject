@@ -9,14 +9,14 @@ public class Login {
 	}
 	
 	public void setEmail(String email) {
-		driver.findElement(By.id("user-name")).sendKeys(email);;
+		driver.findElement(By.id("username")).sendKeys(email);;
 	}
 	public void setPassword(String password) {
 		driver.findElement(By.id("password")).sendKeys(password);;
 	}
 public void clickbutton() 
 {
-driver.findElement(By.id("login-button")).click();
+driver.findElement(By.id("Login")).click();
 }
 public void logout() {
 	driver.findElement(By.cssSelector("a[href='https://www.phptravels.net/account/logout'][class=' waves-effect']")).click();	

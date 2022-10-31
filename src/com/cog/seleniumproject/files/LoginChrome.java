@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 public class LoginChrome {
-    String url="https://www.saucedemo.com/";     
+    String url="https://7westmedia--selenium.sandbox.my.salesforce.com/";     
     WebDriver driver;
     @Test
     public void send()
@@ -25,7 +25,7 @@ public class LoginChrome {
         chromeoptions.addArguments("--no-sandbox");
         chromeoptions.addArguments("--disable-dev-shm-usage"); 
         chromeoptions.setHeadless(true);
-        driver= new ChromeDriver(chromeoptions);       
+        driver= new ChromeDriver();       
     }       
     @AfterTest
     public void aftertest()

@@ -8,22 +8,29 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 public class Logintest 
 {
-		String url="https://www.saucedemo.com/";		  	
+		String url="https://7westmedia--selenium.sandbox.my.salesforce.com/";		  	
 		WebDriver driver;
 		@Test
 		public void send()
 		{
+		    try {
 			driver.get(url);
 			  Call call = new Call(driver);
 		      call.call();
+		    }
+		    catch(Exception e)
+		    {
+		        e.printStackTrace();
+		    }
 		}
+		
 		@BeforeTest
 		public void beforetest() 
 		{
-            FirefoxOptions options=new FirefoxOptions();
-            options.setHeadless(true);
+            //FirefoxOptions options=new FirefoxOptions();
+           // options.setHeadless(true);
             WebDriverManager.firefoxdriver().setup();
-            driver= new FirefoxDriver(options);    
+            driver= new FirefoxDriver();    
             //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));             
         }		
 		@AfterTest
